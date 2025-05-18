@@ -1,0 +1,57 @@
+# query that will fetch the flex
+
+query GetPage($uri: ID!) {
+  page(id: $uri, idType: URI) {
+    title
+    uri
+
+    template {
+      ... on DefaultTemplate {
+        templateName
+        __typename
+      }
+    }
+
+    pageComponents {
+      pageComponents {
+        __typename
+        ...HomePageBanner
+        ...LessonSection
+      }
+    }
+  }
+}
+
+# fragment of all the homepage
+
+fragment HomePageBanner on PageComponentsPageComponentsBannerHomepageLayout {
+  bannerHomepage {
+    title
+    description
+    image {
+      ...Image
+    }
+    button {
+      label
+      link
+    }
+  }
+}
+
+fragment LessonSection on PageComponentsPageComponentsLessonSectionLayout {
+  lesson {
+    title
+    description
+  }
+}
+
+fragment Image on AcfMediaItemConnectionEdge {
+  node {
+    mediaItemUrl
+    mediaDetails {
+      width
+      height
+    }
+    altText
+  }
+}

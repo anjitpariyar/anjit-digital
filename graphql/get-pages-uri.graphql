@@ -1,0 +1,7 @@
+query GetPageUris {
+  pages(first: 2000, where: { status: PUBLISH }) {
+    nodes {
+      uri
+    }
+  }
+}

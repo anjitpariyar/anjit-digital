@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### V0 chat
+[https://v0.dev/chat/sPd37DuPHy9](https://v0.dev/chat/sPd37DuPHy9)
+
 First, run the development server:
 
 ```bash

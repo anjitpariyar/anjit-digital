@@ -1,0 +1,30 @@
+fragment Lesson on RootQuery {
+  lessons {
+    nodes {
+      title
+      slug
+      date
+      content
+      contentType {
+        node {
+          description
+        }
+      }
+      featuredImage {
+        node {
+          mediaItemUrl
+        }
+      }
+
+      lessonCategories {
+        nodes {
+          name
+        }
+      }
+    }
+  }
+}
+
+query GetAllLesson {
+  ...Lesson
+}
