@@ -1,11 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 ### V0 chat
+
 [https://v0.dev/chat/sPd37DuPHy9](https://v0.dev/chat/sPd37DuPHy9)
 
 First, run the development server:
+
+### ENV
+
+.env.local
+
+```bash
+NEXT_PUBLIC_GRAPHQL_ENDPOINT=https://anjit.digital6.au/index.php?graphql
+
+```
 
 ```bash
 npm run dev
@@ -19,21 +27,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Rationale Document: WordPress Homepage Integration for Educational Platform
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. What Was Implemented
 
-## Learn More
+- Updated the homepage with flexible components, including a banner and course sections, to create a dynamic and engaging experience.
+- Developed a custom “Course” post type with categories, allowing structured organization of educational materials.
+- Utilized WPGraphQL API for efficient data fetching and interaction with the frontend.
+- Implemented Advanced Custom Fields (ACF) to manage content blocks flexibly, giving admins full control over updates and layouts.
 
-To learn more about Next.js, take a look at the following resources:
+2. Why This Is the Most Effective and Scalable Solution
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Performance Optimization: Using WPGraphQL enhances content retrieval efficiency, reducing overhead compared to traditional REST APIs.
+- Scalability: The custom course post type with categories provides a structured way to expand the catalog without compromising organization.
+- Admin Control & Flexibility: ACF empowers content managers to update sections without coding, ensuring long-term maintainability.
+- Improved User Experience: The flexible homepage components make it easier for users to access courses, increasing engagement and usability.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This approach ensures a robust, scalable, and user-friendly educational platform while maintaining flexibility for future enhancements.
+Let me know if you need refinements!
