@@ -34,23 +34,23 @@ type DefaultPageProps =
     }
 
 // nextjs function to generate static paths
-export async function generateStaticParams() {
-  const pageUris = await unstable_cache(
-    async () => await sdk.GetPageUris(),
-    ['pageUris'],
-    {
-      tags: ['pageUris'],
-      revalidate,
-    }
-  )()
+// export async function generateStaticParams() {
+//   const pageUris = await unstable_cache(
+//     async () => await sdk.GetPageUris(),
+//     ['pageUris'],
+//     {
+//       tags: ['pageUris'],
+//       revalidate,
+//     }
+//   )()
 
-  const path =
-    pageUris?.pages?.nodes?.map((page) => ({
-      slug: page?.uri?.split('/').filter((segment) => segment) || [],
-    })) || []
+//   const path =
+//     pageUris?.pages?.nodes?.map((page) => ({
+//       slug: page?.uri?.split('/').filter((segment) => segment) || [],
+//     })) || []
 
-  return path
-}
+//   return path
+// }
 
 // nextjs function to generate metadata
 // this is used to generate the title and description of the page (not global)
